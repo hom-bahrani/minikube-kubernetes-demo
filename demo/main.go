@@ -14,9 +14,9 @@ import (
 )
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	name := "Equal Experts"
+	name := "Equal Experts!!"
 	log.Printf("Request for %s\n", name)
-	w.Write([]byte(fmt.Sprintf("Hello, %s\n", name)))
+	w.Write([]byte(fmt.Sprintf("Hello %s\n", name)))
 }
 
 func main() {
