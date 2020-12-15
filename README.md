@@ -15,7 +15,7 @@ You also need to have Docker installed locally, more information can be found [h
 
 ## Run Minikube
 
-Starting Minikube can be done with a simple command 
+Starting Minikube can be done with a simple command: 
 
 ```bash
 minikube start
@@ -31,7 +31,7 @@ minikube kubectl -- get po -A
 
 ## Deploying the demo app
 
-Deploy the demo app to your Minikube cluster using
+Deploy the demo app to your Minikube cluster using:
 
 ```bash
 kubectl apply -f infra/k8s/demo-deployment.yml --validate=false
@@ -50,7 +50,7 @@ kubctl get pods
 # demo-deployment-6674dcff77-zx5cs   1/1     Running   0          40s
 ```
 
-Check on the status of the service
+Check on the status of the service:
 
 ```bash
 kubectl get service
@@ -62,7 +62,7 @@ kubectl get service
 
 ## Making a request
 
-To get a URL that you can use to make a HTTP request to:
+To get a URL for making HTTP requests to you can run:
 
 ```bash
 minikube service demo-service --url
@@ -75,7 +75,7 @@ minikube service demo-service --url
 # |-----------|--------------|-------------|------------------------|
 ```
 
-You can now make a request to the cluster
+You can now make a request to the cluster:
 
 ```bash
 curl http://127.0.0.1:65224
