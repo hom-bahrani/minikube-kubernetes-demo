@@ -4,7 +4,7 @@ In this project we will be deploying a simple Go application to a local kubernet
 
 ## Installation
 
-First step is to install and start Minikube on your local machine, I have included installation instruction using the Minikube binary below. You can also use your favourite package manager such as homebrew on mac, and [choco](https://chocolatey.org/) on windows, more information is available in the [Minikube documentation](https://minikube.sigs.k8s.io/docs/start/) .
+First step is to install and start Minikube on your local machine, I have included installation instruction using the Minikube binary below. You can also use your favourite package manager such as [homebrew](https://brew.sh/) on mac, and [choco](https://chocolatey.org/) on windows, more information is available in the [Minikube documentation](https://minikube.sigs.k8s.io/docs/start/) .
 
 ```bash
 curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
