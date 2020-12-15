@@ -31,7 +31,7 @@ minikube kubectl -- get po -A
 
 ## Deploying the demo app
 
-Deploy the demo app to your single node Minikube using
+Deploy the demo app to your Minikube cluster using
 
 ```bash
 kubectl apply -f infra/k8s/demo-deployment.yml --validate=false
