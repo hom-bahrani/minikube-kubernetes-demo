@@ -19,11 +19,21 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	w.Write([]byte(fmt.Sprintf("Hello %s\n", name)))
 }
 
+func healthHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+}
+
+func readinessHandler(w http.ResponseWriter, r *http.Request) {
+	w.WriteHeader(http.StatusOK)
+}
+
 func main() {
 	// Create Server and Route Handlers
 	r := mux.NewRouter()
 
 	r.HandleFunc("/", handler)
+	r.HandleFunc("/health", healthHandler)
+	r.HandleFunc("/readiness", readinessHandler)
 
 	srv := &http.Server{
 		Handler:      r,

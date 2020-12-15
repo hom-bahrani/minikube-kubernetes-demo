@@ -15,3 +15,21 @@ spec:
       containers:
         - name: demo
           image: schoolofcloud/demo:0.0.2
+          imagePullPolicy: Always
+        ports:
+          - containerPort: 8080  
+        livenessProbe:           
+          httpGet:
+            path: /health
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          periodSeconds: 15
+          timeoutSeconds: 5
+        readinessProbe:
+          httpGet:
+            path: /readiness
+            port: 8080
+            scheme: HTTP
+          initialDelaySeconds: 5
+          timeoutSeconds: 1  
